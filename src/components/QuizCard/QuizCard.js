@@ -3,6 +3,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import {getData} from '../../redux/actions/dataAction';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 
 const QuizCard = () => {
     const dispatch = useDispatch();
@@ -25,12 +26,10 @@ const QuizCard = () => {
                             <Card.Text>
                                 {item.question}
                             </Card.Text>
-                            <Card.Link>
-                                True
-                            </Card.Link>
-                            <Card.Link>
-                                False
-                            </Card.Link>
+                           <Button variant="success">True</Button>
+                           <div style={{width:10, display: 'inline-block'}}></div>
+                           <Button variant="danger">False</Button>
+                           <div style={{width:10, display: 'inline-block'}}></div>
                         </Card.Body>
                     </Card>
                     </CardGroup>
