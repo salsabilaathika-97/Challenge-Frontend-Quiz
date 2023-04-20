@@ -1,6 +1,6 @@
 import axios from "axios";
 import TYPES from "../types";
-import swal from "sweetalert"
+import swal from "sweetalert";
 import { storeData } from "../../customLocalStorage";
 
 export const handleLogin = (payload, navigate) => {
