@@ -1,9 +1,24 @@
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
 import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router';
+import swal from 'sweetalert';
+import { Button } from 'react-bootstrap';
 
 const Navigation = () => {
     const {userData} = useSelector((state) => state);
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        swal({
+            title: "Logout",
+            text: "Logout Berhasil",
+            icon: "success",
+            timer: 3000,
+        }).then(() => {
+            navigate("/")
+        })
+    }
 
     return (
         <Navbar bg="dark" variant="dark">
@@ -14,7 +29,7 @@ const Navigation = () => {
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Navbar.Text>
-                        Login as: <a href="#">User</a>
+                        <Button variant='warning' onClick={handleLogout}>Logout</Button>
                     </Navbar.Text>
                 </Navbar.Collapse>
             </Container>
