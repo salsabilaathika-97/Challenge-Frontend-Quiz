@@ -1,9 +1,10 @@
 import React from "react";
+import Navigation from "../../components/Navigation/Navigation";
 
 const Dashboard = () => {
     return (
         <div>
-            <h1>Halaman Dashboard</h1>
+            <Navigation />
         </div>
     )
 }
