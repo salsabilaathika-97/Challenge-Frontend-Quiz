@@ -22,7 +22,7 @@ export const handleLogin = (payload, navigate) => {
                             icon: "success",
                             timer: 3000,
                         });
-                        navigate("/home");
+                        navigate("/dashboard");
                     });
                 } else {
                     swal({
